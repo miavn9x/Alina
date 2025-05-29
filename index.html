@@ -1821,8 +1821,10 @@
         <div class="border-t border-gray-700 pt-6 text-center text-gray-400">
           <p>
             &copy; 2024 Trung tâm Nghệ thuật Alina. Design by 
-            <a id="wfour-link" class="text-alina-pale hover:text-alina-pink transition-colors" target="_blank" rel="noopener noreferrer"></a>
-          </p>
+            <a id="wfour-link" class="text-alina-pale hover:text-alina-pink transition-colors" style="cursor:pointer;" rel="noopener noreferrer">
+              W-FOUR TECH
+            </a>
+                      </p>
         </div>
       </div>
     </footer>
@@ -1912,12 +1914,20 @@
           hideMobileMenu();
         }
       });
-           // Dynamically set the link to avoid SEO detection
-           document.addEventListener('DOMContentLoaded', function () {
-              var link = document.getElementById('wfour-link');
-              link.href = 'https://' + 'wfourtech.vn/';
-              link.textContent = 'W-FOUR TECH';
-            });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const obfuscated = [119, 102, 111, 117, 114, 116, 101, 99, 104, 46, 118, 110]; 
+  const domain = obfuscated.map(c => String.fromCharCode(c)).join('');
+  const protocol = String.fromCharCode(104, 116, 116, 112, 115); // "https"
+  const fullUrl = protocol + '://' + domain + '/';
+
+  const link = document.getElementById('wfour-link');
+  link.addEventListener('click', () => {
+    window.open(fullUrl, '_blank');
+  });
+});
+
 
       // Smooth scrolling for navigation links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
