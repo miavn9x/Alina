@@ -474,8 +474,6 @@
               height="600"
               controls
               preload="metadata"
-              poster="./assets/img/alina-17.jpg"
-              class="w-full h-auto"
             >
               <source
                 src="https://res.cloudinary.com/dsosczr7j/video/upload/v1748487322/6647879393098_wk3nma.mp4"
@@ -649,7 +647,7 @@
         <div class="grid lg:grid-cols-2 gap-8 mb-12">
           <!-- Modern Dance -->
           <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden fade-in">
-            <div class="relative h-56">
+            <div class="relative h-[500px]">
               <img
                 src="./assets/img/alina-16.jpg"
                 alt="Modern Dance"
@@ -696,7 +694,7 @@
 
           <!-- Ballet -->
           <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden fade-in">
-            <div class="relative h-56">
+            <div class="relative h-[500px]">
               <img
                 src="./assets/img/alina-1.jpg"
                 alt="Ballet"
@@ -743,7 +741,7 @@
 
           <!-- Drawing & Painting -->
           <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden fade-in">
-            <div class="relative h-56">
+            <div class="relative h-[500px]">
               <img
                 src="./assets/img/alina-6.jpg"
                 alt="Drawing & Painting"
@@ -785,7 +783,7 @@
 
           <!-- Piano -->
           <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden fade-in">
-            <div class="relative h-56">
+            <div class="relative h-[500px]">
               <img
                 src="./assets/img/alina-5.jpg"
                 alt="Piano"
@@ -840,9 +838,9 @@
           <div class="grid md:grid-cols-2 gap-8">
             <!-- MC Kids -->
             <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden fade-in">
-              <div class="relative h-56">
+              <div class="relative h-[500px]">
                 <img
-                  src="./assets/brand-slogan-logo-horizontal/brand-slogan-logo-horizontal-remove-bg.png"
+                  src="./assets/img/Final (1).png"
                   alt="MC Kids"
                   class="full-size-image clickable-image"
                 />
@@ -887,7 +885,7 @@
 
             <!-- Vocal Training -->
             <div class="course-card bg-white rounded-xl shadow-lg overflow-hidden fade-in">
-              <div class="relative h-56">
+              <div class="relative h-[500px]">
                 <img
                   src="./assets/img/alina-4.jpg"
                   alt="Thanh nhạc"
@@ -921,7 +919,7 @@
                   <img
                     src="./assets/img/alina-5.jpg"
                     alt="Vocal class"
-                    class="w-14 h-14 rounded-lg object-cover clickable-image"
+                    class="w-14 h-auto rounded-lg object-cover clickable-image"
                   />
                 </div>
               </div>
@@ -999,7 +997,7 @@
             <img
               src="./assets/img/alina-19.jpg"
               alt="Student Performance"
-              class="w-full h-64 object-cover clickable-image"
+              class="w-auto h-full object-cover clickable-image"
             />
             <div class="absolute inset-0 bg-black/30 flex items-end">
               <div class="p-4 text-white">
@@ -1012,7 +1010,7 @@
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alina-18.jpg-1iCmd1GUGn1Yw9eZyeaHXU6fr0ipEd.jpeg"
               alt="Art Exhibition"
-              class="w-full h-64 object-cover clickable-image"
+              class="w-auto h-full object-cover clickable-image"
             />
             <div class="absolute inset-0 bg-black/30 flex items-end">
               <div class="p-4 text-white">
@@ -1042,17 +1040,29 @@
         <div class="mb-12 fade-in">
           <div class="max-w-4xl mx-auto">
             <div class="relative rounded-xl overflow-hidden shadow-xl">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alina-10.jpg-Lb3PBz5ypOchLB9lNuAyIheh0B58QE.jpeg"
-                alt="Tour phòng tập Alina"
-                class="w-full h-80 object-cover clickable-image"
-              />
-              <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
-                <div class="text-center text-white">
-                  <i class="fas fa-play-circle text-5xl mb-3"></i>
-                  <p class="text-lg font-semibold">Tour phòng tập Alina</p>
-                </div>
-              </div>
+              <video
+                id="studioTourVideo"
+                src="https://res.cloudinary.com/dsosczr7j/video/upload/v1748487322/6647879393098_wk3nma.mp4"
+                controls
+                width="100%"
+                height="500"
+                style="cursor:pointer"
+              >
+                Trình duyệt của bạn không hỗ trợ video.
+              </video>
+              <script>
+                // Play video on click
+                document.addEventListener('DOMContentLoaded', function () {
+                  const video = document.getElementById('studioTourVideo');
+                  if (video) {
+                    video.addEventListener('click', function () {
+                      if (video.paused) {
+                        video.play();
+                      }
+                    });
+                  }
+                });
+              </script>
             </div>
             <div class="text-center mt-4">
               <h3 class="font-playfair text-xl font-bold text-gray-800 mb-2">
@@ -1073,7 +1083,7 @@
               <img
                 src="./assets/img/alina-16.jpg"
                 alt="Phòng tập nhảy"
-                class="w-full h-64 object-cover clickable-image"
+                class="w-full h-[500px] object-cover clickable-image"
               />
               <div
                 class="absolute top-3 left-3 bg-alina-pink text-white px-3 py-1 rounded-full text-sm font-semibold"
@@ -1114,7 +1124,7 @@
               <img
                 src="./assets/img/alina-6.jpg"
                 alt="Phòng tập vẽ"
-                class="w-full h-64 object-cover clickable-image"
+                class="w-full h-[500px] object-cover clickable-image"
               />
               <div
                 class="absolute top-3 left-3 bg-alina-light text-white px-3 py-1 rounded-full text-sm font-semibold"
@@ -1155,7 +1165,7 @@
               <img
                 src="./assets/img/alina-5.jpg"
                 alt="Phòng piano"
-                class="w-full h-64 object-cover clickable-image"
+                class="w-full h-[500px] object-cover clickable-image"
               />
               <div
                 class="absolute top-3 left-3 bg-alina-pale text-white px-3 py-1 rounded-full text-sm font-semibold"
@@ -1194,7 +1204,7 @@
               <img
                 src="./assets/img/alina-1.jpg"
                 alt="Phòng ballet"
-                class="w-full h-64 object-cover clickable-image"
+                class="w-full h-[500px] object-cover clickable-image"
               />
               <div
                 class="absolute top-3 left-3 bg-gradient-to-r from-alina-pink to-alina-light text-white px-3 py-1 rounded-full text-sm font-semibold"
@@ -1247,7 +1257,7 @@
               <img
                 src="./assets/img/alina-17.jpg"
                 alt="Học viên nhảy hiện đại"
-                class="w-full h-40 object-cover rounded-lg clickable-image"
+                class="w-full h-full object-cover rounded-lg clickable-image"
               />
               <div
                 class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center"
@@ -1262,7 +1272,7 @@
               <img
                 src="./assets/img/alina-20.jpg"
                 alt="Học viên ballet"
-                class="w-full h-40 object-cover rounded-lg clickable-image"
+                class="w-full h-full object-cover rounded-lg clickable-image"
               />
               <div
                 class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center"
@@ -1277,7 +1287,7 @@
               <img
                 src="./assets/img/alina-21.jpg"
                 alt="Học viên vẽ tranh"
-                class="w-full h-40 object-cover rounded-lg clickable-image"
+                class="w-full h-full object-cover rounded-lg clickable-image"
               />
               <div
                 class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center"
@@ -1292,7 +1302,7 @@
               <img
                 src="./assets/img/alina-17.jpg"
                 alt="Học viên piano"
-                class="w-full h-40 object-cover rounded-lg clickable-image"
+                class="w-full h-full object-cover rounded-lg clickable-image"
               />
               <div
                 class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center"
@@ -1307,7 +1317,7 @@
               <img
                 src="./assets/img/alina-19.jpg"
                 alt="Biểu diễn sân khấu"
-                class="w-full h-40 object-cover rounded-lg clickable-image"
+                class="w-full h-full object-cover rounded-lg clickable-image"
               />
               <div
                 class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center"
@@ -1322,7 +1332,7 @@
               <img
                 src="./assets/img/alina-23.jpg"
                 alt="Khu vực chờ"
-                class="w-full h-40 object-cover rounded-lg clickable-image"
+                class="w-full h-full object-cover rounded-lg clickable-image"
               />
               <div
                 class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center"
@@ -1337,7 +1347,7 @@
               <img
                 src="./assets/img/alina-22.jpg"
                 alt="Phòng tập cách âm"
-                class="w-full h-40 object-cover rounded-lg clickable-image"
+                class="w-full h-full object-cover rounded-lg clickable-image"
               />
               <div
                 class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center"
@@ -1352,7 +1362,7 @@
               <img
                 src="./assets/img/alina-24.jpg"
                 alt="Cầu thang nghệ thuật"
-                class="w-full h-40 object-cover rounded-lg clickable-image"
+                class="w-full h-full object-cover rounded-lg clickable-image"
               />
               <div
                 class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center"
@@ -1371,7 +1381,7 @@
               <img
                 src="./assets/img/alina-17.jpg"
                 alt="K-Pop Dance Performance"
-                class="w-full h-56 object-cover clickable-image"
+                class="w-full h-full object-cover clickable-image"
               />
               <div
                 class="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded-full text-sm"
@@ -1383,7 +1393,7 @@
               <img
                 src="/assets/img/alina-21.jpg"
                 alt="Ballet Recital 2024"
-                class="w-full h-56 object-cover clickable-image"
+                class="w-full h-full object-cover clickable-image"
               />
               <div
                 class="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded-full text-sm"
@@ -1654,9 +1664,9 @@
         <div class="max-w-4xl mx-auto">
           <div class="relative rounded-xl overflow-hidden shadow-xl fade-in">
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/alina-18.jpg-1iCmd1GUGn1Yw9eZyeaHXU6fr0ipEd.jpeg"
+              src="./assets/img/Final (1).png"
               alt="Trung tâm nghệ thuật Alina"
-              class="w-full h-80 object-cover clickable-image"
+              class="w-full h-[500px] object-cover clickable-image"
             />
             <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
               <div class="text-center text-white">
@@ -1693,19 +1703,13 @@
           </h2>
           <div class="text-lg text-gray-600 leading-relaxed space-y-4">
             <p>
-              Logo Alina được thiết kế với ý nghĩa sâu sắc - sự kết hợp hoàn hảo giữa chữ "A" tượng
-              trưng cho mái nhà yêu thương và khởi đầu, cùng với cánh hoa sen biểu tượng cho vẻ đẹp
-              thuần khiết, sức sống mạnh mẽ và tinh thần vươn lên không ngừng.
+              Tại Trung tâm Nghệ thuật Alina, chúng tôi tin rằng mỗi đứa trẻ đều ẩn chứa một tài năng độc đáo và một niềm đam mê cháy bỏng. Alina không chỉ là nơi học nghệ thuật, mà còn là ngôi nhà thứ hai nơi mỗi học viên được nuôi dưỡng tài năng, phát triển cá tính và tìm thấy niềm đam mê thực sự của mình.
             </p>
+            <!-- <p>
+              Với màu hồng cánh sen chủ đạo, Alina mang đến sự nhẹ nhàng, nhân ái và nguồn cảm hứng bất tận. Màu trắng được thêm vào tượng trưng cho sự trong sáng, minh bạch và lòng tin, tạo nên một không gian học tập an toàn và đáng tin cậy.
+            </p> -->
             <p>
-              Màu hồng cánh sen chủ đạo thể hiện sự nhẹ nhàng, nhân ái và nguồn cảm hứng bất tận.
-              Chi tiết màu trắng tượng trưng cho sự trong sáng, minh bạch và lòng tin. Thông điệp
-              "Believe in yourself" là kim chỉ nam của thương hiệu, cùng với hình ảnh ngọn lửa đại
-              diện cho đam mê, nhiệt huyết và ý chí vươn lên.
-            </p>
-            <p>
-              Alina không chỉ là nơi học nghệ thuật, mà còn là ngôi nhà thứ hai nơi mỗi học viên
-              được nuôi dưỡng tài năng, phát triển cá tính và tìm thấy niềm đam mê thực sự của mình.
+              "Believe in yourself" là kim chỉ nam của chúng tôi, truyền tải thông điệp khích lệ các học viên tự tin vào bản thân. Cùng với hình ảnh ngọn lửa rực cháy, Alina thắp lên đam mê, nhiệt huyết và ý chí vươn lên trong mỗi trái tim nhỏ.
             </p>
           </div>
         </div>
